@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- font-link -->
+
+
+
+
+
+
+    <title>Yummy</title>
+</head>
+
+<body class="overflow-hidden">
+    <div class="container-fluid p-0">
+        <div id="navBar" class="vh-100 position-fixed row top-0 a1 a2">
+            <div class="part1 h-100 bg-black position-relative">
+                <div class="links position-relative">
+                    <ul class="list-unstyled nnn overflow-hidden position-absolute p-3">
+                        <li id="sbtn" class="py-2 position-relative cursor-pointer text-white" style="top: 0px;">Search</li>
+                        <li id="cat" class="py-2 position-relative cursor-pointer text-white" style="top: 0px;">Categories</li>
+                        <li id="area" class="py-2 position-relative cursor-pointer text-white" style="top: 0px;">Area</li>
+                        <li id="ingred" class="py-2 position-relative cursor-pointer text-white" style="top: 0px;">Ingredients</li>
+                        <li id="contact" class="py-2 position-relative cursor-pointer text-white" style="top: 0px;">Contact Us</li>
+                    </ul>
+                </div>
+                <div class="nav-footer text-white position-absolute p-3">
+                    <div class="icons">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <div class="footer">
+                        <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="part2 h-100 bg-white d-flex flex-column align-items-center position-relative">
+                <img class="logo mt-3" src="imge/logo-sm1.png" alt="#">
+                <i id="navBtn" class="fa-solid fa-bars fa-2x position-absolute top-50 translate-middle-y"></i>
+                <div class="position-absolute nav-iconn">
+                    <i class="fa-solid fa-globe d-block"></i>
+                    <i class="fa-solid fa-share-nodes"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <main class="bg-black overflow-auto">
+            <div class="containera1 my-5">
+                <div id="search" class="d-none">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input id="sbyname" type="text" class="form-control" placeholder="Search By Name"
+                                aria-label="Search By Name">
+                        </div>
+                        <div class="col-md-6">
+                            <input id="sbyf" maxlength="1" type="text" class="form-control" placeholder="Search By First Letter"
+                                aria-label="Search By First Letter">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="containera1 my-5 ">
+                <div id="content" class="row g-4">
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="loading-screen top-0 start-0 end-0 bottom-0 w-100 justify-content-center align-items-center">
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
