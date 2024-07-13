@@ -13,6 +13,7 @@
 }
 main{
     min-height: 100vh;
+    height: auto;
 }
 
 .containera1{
@@ -82,16 +83,26 @@ main{
     background-color: #f8d7da;
 }
 
-.t-50{
-    transform: translateY(140%);
+.myy-5{
+    margin-top: 19rem !important;
+    margin-bottom: 3rem !important;
 }
-
+.top-12{
+    width: 70%;
+}
+.ts{
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+}
 
 @media (max-width:767px) {
-    .t-50{
-        transform: translateY(50%);
+    .myy-5{
+        margin-top: 8rem !important;
     }
 }
+
 .btncon{
     width: 80px;
     margin: auto;

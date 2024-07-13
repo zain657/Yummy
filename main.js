@@ -47,12 +47,16 @@ function closeNav() {
 }
 
 async function getSearchApi(name, s) {
+    $(".loading-screen").fadeIn(300);
+    $(".loading-screen").removeClass('ts').addClass('top-12');
     s = s ? s : 's';
     name = name ? name : '';
     let response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?${s}=${name}`)
     let data = await response.json();
     data = data.meals;
-    displayMeals(data);
+    data ? displayMeals(data) : displayMeals([]);
+    $(".loading-screen").fadeOut(300);
+    $(".loading-screen").removeClass('top-12').addClass('ts');
 }
 
 function displayMeals(arr) {
@@ -266,9 +270,10 @@ $('#ingred').on('click', () => {
 });
 
 function displayContact() {
+    $('#search').addClass('d-none');
     let cont = `
-    <div class="col-8 offset-2 t-50">
-                        <div class="row g-4">
+    <div class="col-8 offset-2  bg-black myy-5">
+                        <div class="row g-4 bg-black">
                             <div class="col-md-6">
                                 <input id="name" onkeyup="nameValidate(this.value)" type="text" class="form-control" placeholder="Enter Your Name">
                                 <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
